@@ -10,6 +10,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { SidenavigationComponent } from './components/sidenavigation/sidenavigation.component';
 import { ProductsComponent } from './components/products/products.component';
 import { SharedModule } from '../shared/shared.module';
+import {HttpClientModule} from '@angular/common/http';
+import { CategoryService } from './services/category.service';
+import { CategoriesStoreItem } from './services/categories.storeItem';
 
 
 const routes: Routes = [
@@ -29,8 +32,10 @@ const routes: Routes = [
   imports: [
     CommonModule,
     FontAwesomeModule,
-    SharedModule
+    SharedModule,
+    HttpClientModule
   ],
   // exports: [RouterModule]
+  providers: [CategoryService, CategoriesStoreItem]
 })
 export class HomeModule { }
