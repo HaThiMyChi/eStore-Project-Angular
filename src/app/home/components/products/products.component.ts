@@ -1,18 +1,15 @@
 import { Component } from '@angular/core';
-import { ProductsService } from './products.service';
-import { ProductListItem } from './products.type';
+import { ProductsStoreItem } from '../../services/product/products.storeItem';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss'],
-  providers: [ProductsService]
+  styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent {
-  products: ProductListItem[] = [];
 
-  constructor(productsService: ProductsService) {
-    this.products = productsService.getProductsList();
+  constructor(public productsStore: ProductsStoreItem) {
+    
   }
 
 }

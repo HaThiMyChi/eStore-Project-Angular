@@ -1,8 +1,8 @@
 import { Component, OnDestroy } from '@angular/core';
 import { Category } from '../../types/category.type';
-import { CategoryService } from '../../services/category.service';
+import { CategoryService } from '../../services/category/category.service';
 import { Subscription } from 'rxjs';
-import { CategoriesStoreItem } from '../../services/categories.storeItem';
+import { CategoriesStoreItem } from '../../services/category/categories.storeItem';
 
 @Component({
   selector: 'app-sidenavigation',
