@@ -6,7 +6,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HeaderComponent } from './components/header/header.component';
 import { CategorynavigationComponent } from './components/categorynavigation/categorynavigation.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NotFoundComponent } from './not-found/not-found.component';
 import { SidenavigationComponent } from './components/sidenavigation/sidenavigation.component';
 import { ProductsComponent } from './components/products/products.component';
 import { SharedModule } from '../shared/shared.module';
@@ -15,6 +14,10 @@ import { CategoryService } from './services/category/category.service';
 import { CategoriesStoreItem } from './services/category/categories.storeItem';
 import { ProductsStoreItem } from './services/product/products.storeItem';
 import { ProductsService } from './services/product/products.service';
+import { HomeRoutingModule } from './home-routing.module';
+import { ReactiveFormsModule } from '@angular/forms';
+import { ProductsGalleryComponent } from './components/products-gallery/products-gallery.component';
+import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -26,15 +29,19 @@ const routes: Routes = [
     HomeComponent,
     HeaderComponent,
     CategorynavigationComponent,
-    NotFoundComponent,
     SidenavigationComponent,
-    ProductsComponent
+    ProductsComponent,
+    ProductsGalleryComponent,
+    ProductdetailsComponent
   ],
   imports: [
     CommonModule,
     FontAwesomeModule,
     SharedModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule,
+    HomeRoutingModule,
+    ReactiveFormsModule
   ],
   // exports: [RouterModule]
   providers: [CategoryService, CategoriesStoreItem, ProductsStoreItem, ProductsService]
