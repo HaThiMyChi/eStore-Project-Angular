@@ -18,6 +18,7 @@ import { HomeRoutingModule } from './home-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProductsGalleryComponent } from './components/products-gallery/products-gallery.component';
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
+import { CartStoreItem } from './services/cart/cart.storeItem';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -44,6 +45,6 @@ const routes: Routes = [
     ReactiveFormsModule
   ],
   // exports: [RouterModule]
-  providers: [CategoryService, CategoriesStoreItem, ProductsStoreItem, ProductsService]
+  providers: [CategoryService, CategoriesStoreItem, ProductsStoreItem, ProductsService, CartStoreItem]
 })
 export class HomeModule { }

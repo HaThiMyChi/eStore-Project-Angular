@@ -4,6 +4,7 @@ import { CategoriesStoreItem } from '../../services/category/categories.storeIte
 import { SearchKeyword } from '../../types/searchKeyword.type';
 import { NavigationEnd,  Router} from '@angular/router';
 import { filter } from 'rxjs';
+import { CartStoreItem } from '../../services/cart/cart.storeItem';
 
 @Component({
   selector: 'app-header',
@@ -20,7 +21,11 @@ export class HeaderComponent {
   searchClicked: EventEmitter<SearchKeyword> = new EventEmitter<SearchKeyword>();
   displaySearch: boolean = true;
 
-  constructor(public categoryStore: CategoriesStoreItem, private router: Router) {
+  constructor(
+    public categoryStore: CategoriesStoreItem, 
+    private router: Router,
+    public cartStore: CartStoreItem
+  ) {
     router.events
       .pipe(filter(event =>
       event instanceof NavigationEnd
