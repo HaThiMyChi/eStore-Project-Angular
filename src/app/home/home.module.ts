@@ -19,6 +19,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { ProductsGalleryComponent } from './components/products-gallery/products-gallery.component';
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
 import { CartStoreItem } from './services/cart/cart.storeItem';
+import { CartComponent } from './components/cart/cart.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -33,7 +34,8 @@ const routes: Routes = [
     SidenavigationComponent,
     ProductsComponent,
     ProductsGalleryComponent,
-    ProductdetailsComponent
+    ProductdetailsComponent,
+    CartComponent
   ],
   imports: [
     CommonModule,

@@ -35,6 +35,7 @@
         <button
           type="button"
           class="btn btn-dark position-relative"
+          (click)="navigateToCart()"
         >
           <fa-icon [icon]="faShoppingCart"></fa-icon>
           <ng-container *ngIf="cartStore.cart$ | async as cart">
