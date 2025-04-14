@@ -20,6 +20,7 @@ import { ProductsGalleryComponent } from './components/products-gallery/products
 import { ProductdetailsComponent } from './components/productdetails/productdetails.component';
 import { CartStoreItem } from './services/cart/cart.storeItem';
 import { CartComponent } from './components/cart/cart.component';
+import { UserSignupComponent } from './components/users/user-signup/user-signup.component';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -35,7 +36,8 @@ const routes: Routes = [
     ProductsComponent,
     ProductsGalleryComponent,
     ProductdetailsComponent,
-    CartComponent
+    CartComponent,
+    UserSignupComponent
   ],
   imports: [
     CommonModule,
