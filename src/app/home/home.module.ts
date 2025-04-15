@@ -21,6 +21,8 @@ import { ProductdetailsComponent } from './components/productdetails/productdeta
 import { CartStoreItem } from './services/cart/cart.storeItem';
 import { CartComponent } from './components/cart/cart.component';
 import { UserSignupComponent } from './components/users/user-signup/user-signup.component';
+import { UserLoginComponent } from './components/users/user-login/user-login.component';
+import { UserService } from './services/users/user-service.service';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -37,7 +39,8 @@ const routes: Routes = [
     ProductsGalleryComponent,
     ProductdetailsComponent,
     CartComponent,
-    UserSignupComponent
+    UserSignupComponent,
+    UserLoginComponent
   ],
   imports: [
     CommonModule,
@@ -49,6 +52,6 @@ const routes: Routes = [
     ReactiveFormsModule
   ],
   // exports: [RouterModule]
-  providers: [CategoryService, CategoriesStoreItem, ProductsStoreItem, ProductsService, CartStoreItem]
+  providers: [CategoryService, CategoriesStoreItem, ProductsStoreItem, ProductsService, CartStoreItem, UserService]
 })
 export class HomeModule { }
