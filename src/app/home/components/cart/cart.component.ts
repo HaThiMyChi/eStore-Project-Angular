@@ -31,7 +31,8 @@ export class CartComponent {
       address: '',
       city: '',
       state: '',
-      pin: ''
+      pin: '',
+      email: ''
     }
 
     this.subscriptions.add(

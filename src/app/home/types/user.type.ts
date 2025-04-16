@@ -21,6 +21,7 @@ export interface loggedInUser {
     city: string;
     state: string;
     pin: string;
+    email: string;
 }
 
 export interface loginToken {

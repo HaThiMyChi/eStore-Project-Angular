@@ -23,6 +23,7 @@ import { CartComponent } from './components/cart/cart.component';
 import { UserSignupComponent } from './components/users/user-signup/user-signup.component';
 import { UserLoginComponent } from './components/users/user-login/user-login.component';
 import { UserService } from './services/users/user-service.service';
+import { OrderService } from './services/order/order.service';
 
 const routes: Routes = [
   {path: 'home', component: HomeComponent},
@@ -52,6 +53,6 @@ const routes: Routes = [
     ReactiveFormsModule
   ],
   // exports: [RouterModule]
-  providers: [CategoryService, CategoriesStoreItem, ProductsStoreItem, ProductsService, CartStoreItem, UserService]
+  providers: [CategoryService, CategoriesStoreItem, ProductsStoreItem, ProductsService, CartStoreItem, UserService, OrderService]
 })
 export class HomeModule { }
