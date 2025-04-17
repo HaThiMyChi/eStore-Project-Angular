@@ -63,6 +63,10 @@ export class HeaderComponent implements OnDestroy {
     this.userService.logout();
   }
 
+  pastOrders(): void {
+    this.router.navigate(['home/pastorders']);
+  }
+
   ngOnDestroy(): void {
     this.subscriptions.unsubscribe();
   }
