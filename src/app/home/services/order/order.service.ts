@@ -45,14 +45,17 @@ export class OrderService {
 
     getOrders(userEmail: string): Observable<PastOrder[]> {
         const url: string = `http://localhost:5001/orders/allorders?userEmail=${userEmail}`;
-        return this.httpClient.get<PastOrder[]>(url, {headers: {authorization: this.userservice.token}});
+    
+        return this.httpClient.get<PastOrder[]>(url, {
+          headers: { authorization: this.userservice.token },
+        });
     }
-
-    getOrderProducts(orderId: string): Observable<PastOrderProduct[]> {
-        const url: string = `http://localhost:5001/orders/allorders?orderId=${orderId}`;
-
+    
+      getOrderProducts(orderId: number): Observable<PastOrderProduct[]> {
+        const url: string = `http://localhost:5001/orders/orderproducts?orderId=${orderId}`;
+    
         return this.httpClient.get<PastOrderProduct[]>(url, {
-            headers: {authorization: this.userservice.token}
+          headers: { authorization: this.userservice.token },
         });
     }
 }
